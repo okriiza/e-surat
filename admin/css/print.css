@@ -1,0 +1,18 @@
+.bg-logo img {
+  /* background-image: url("../img/logo/696px-Bandung_coa.png"); */
+
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  height: 550px;
+  opacity: 0.2;
+  margin-top: 250px;
+}
+.isi-surat {
+  /* background-color: #000; */
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+
+  /* color: #fff; */
+}

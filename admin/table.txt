@@ -1,0 +1,98 @@
+1. User :
+   1. RT  (View Surat, Setujui Surat, Tambah warga)
+   2. RW (View Surat, Setujui Surat, Tambah warga)
+   3. Kepala Desa (View Surat, Setujui Surat, Tambah warga)
+   4. Camat kecamatan (Setujui Surat, Lihat warga, View Surat)
+   5. Admin (Kelola User,Surat dll)
+   6. User Keluarga (Buat surat)
+
+2. Surat
+   1. Surat kepolisian 
+   2. Surat keterangan tidak mampu
+
+
+KK :
+1. id (int 11)
+2. NO KK (varchar 30)
+3. nama (varchar 30)
+4. alamat (text)
+5. rt (int 11)
+6. rw (int 11)
+7. kelurahan (text)
+8. kecamatan (text)
+9. kabupaten (text)
+10. kode pos (int 10)
+11. provinsi (text)
+12. created (datetime)
+13. modified (datetime)
+
+RT :
+1. id (int 11)
+2. nama_rt (text)
+3. ttd64 (text)
+4. ttdimg (text)
+5. created (datetime)
+6. modified (datetime)
+
+RW :
+1. id (int 11)
+2. nama_rw (text)
+3. ttd64 (text)
+4. ttdimg (text)
+5. created (datetime)
+6. modified (datetime)
+
+kades :
+1. id (int 11)
+2. nama_kades (text)
+3. nama_desa (text)
+4. ttd64 (text)
+5. ttdimg (text)
+6. created (datetime)
+7. modified (datetime)
+
+User :
+1. id (int 11)
+2. username (varchar 30)
+3. password (varchar 255)
+4. jabatan (int 11) 1. admin, 2.rt, 3. rw, 4. kades, 5. camat, 6.kk
+5. table_join (int 11)
+6. created (datetime)
+7. modified (datetime)
+
+jenis Surat :
+1. id (int 11)
+2. nama (text)
+3. created (datetime current_timestamp())
+4. modified (datetime  current_timestamt() ON UPDATE current_timestamp())
+
+surat :
+1. id (int 11)
+2. jenis_surat_id (int 11)
+3. user_id (int 11)
+4. rt_ttd (int 11) (1= tampilkan ttd nya, 0 = gak tampil)
+5. rw_ttd(int 11) (1= tampilkan ttd nya, 0 = gak tampil)
+6. kades_ttd(int 11) (1= tampilkan ttd nya, 0 = gak tampil)
+7. camat_ttd (int 11) (1= tampilkan ttd nya, 0 = gak tampil)
+8. keperluan_surat (text)
+9. created (datetime)
+10. modified (datetime)
+
+warga : 
+1. id (int 11)
+2. no_ktp (varchar 30)
+3. nama_warga (varchar 30)
+4. agama (varchar 30)
+5. tempat_lahir (varchar 30)
+6. tgl_lahir (date)
+7. gol_darah (varchar 2)
+8. warga_negara (varchar 20)
+9. pendidikan (varchar 10)
+10. pekerjaan (varchar 30)
+11. status_nikah (varchar 20)
+12. jenis_kelamin (varchar 20)
+13. ayah (varchar 30)
+14. ibu (varchar 30)
+15. is_kepala_keluarga (int 11) (1 = kepala, 0 = bukan)
+16. created (datetime)
+17. modified (datetime)
